@@ -8,6 +8,12 @@ $(window).on("scroll", function(){
 })
 
 $(document).ready(function() {
+    // Set dynamic footer year
+    var yearSpan = document.getElementById('footer-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
     $('.owl-carousel').owlCarousel({
         loop: true,
         items: 2,
